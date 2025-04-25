@@ -5,30 +5,44 @@ const DexPalDashboard = () => {
   
   // Documentation Banner - Added to clearly indicate this is for documentation purposes only
   const DocumentationBanner = () => (
-    <div className="documentation-banner">
-      <h2>DexPal Documentation & Knowledge Center</h2>
-      <p>This dashboard is for informational purposes only. It provides documentation about DexPal's features, vision, and roadmap. This is NOT a trading interface.</p>
+    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+      <div className="flex">
+        <div className="flex-shrink-0">
+          <svg className="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+          </svg>
+        </div>
+        <div className="ml-3">
+          <h2 className="text-lg font-medium text-yellow-800">DexPal Documentation & Knowledge Center</h2>
+          <p className="mt-1 text-sm text-yellow-700">
+            This dashboard is for informational purposes only. It provides documentation about DexPal's features, vision, and roadmap. This is NOT a functional trading interface or tool.
+          </p>
+        </div>
+      </div>
     </div>
   );
   
-  // Navigation items
+  // Navigation items updated based on DexPal's actual features
   const navItems = [
     { id: 'overview', label: 'Overview' },
     { id: 'market', label: 'Market Statistics' },
     { id: 'business', label: 'Business Model' },
-    { id: 'customers', label: 'Target Customers' },
-    { id: 'product', label: 'Product Roadmap' },
+    { id: 'custom_dashboard', label: 'Custom Dashboard' },
+    { id: 'pair_screener', label: 'Pair Screener' },
+    { id: 'rewards', label: 'Rewards & Competitions' },
+    { id: 'earn', label: 'Earn Opportunities' },
+    { id: 'dex_profile', label: 'DEX Profiles' },
+    { id: 'trading_history', label: 'Trading History' },
+    { id: 'analytics', label: 'Trade Analytics' },
+    { id: 'wallets', label: 'Wallets Manager' },
+    { id: 'leaderboards', label: 'Leaderboards' },
+    { id: 'education', label: 'Education & AI' },
+    { id: 'news', label: 'Latest News' },
     { id: 'tech', label: 'Technical Stack' },
     { id: 'team', label: 'Team' },
     { id: 'token', label: 'Token Details' },
     { id: 'strategy', label: 'Go-to-Market' },
-    // New sections based on documentation
-    { id: 'analytics', label: 'Advanced Analytics' },
-    { id: 'education', label: 'Educational Center' },
-    { id: 'rewards', label: 'Points & Rewards' },
-    { id: 'paper', label: 'Paper Trading' },
-    { id: 'security', label: 'Security Center' },
-    { id: 'compare', label: 'DEX Comparison' }
+    { id: 'security', label: 'Security Center' }
   ];
   
   // Simple content rendering function
@@ -39,8 +53,8 @@ const DexPalDashboard = () => {
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-bold mb-4">DexPal Overview</h2>
             <p className="mb-4">
-              The ultimate data terminal and rewards hub for leverage trading on decentralized exchanges (DEXs).
-              Bridging the gap between 100M+ CEX users and the growing DEX ecosystem.
+              The first data dashboard and rewards hub for leverage trading on decentralized exchanges (DEXs).
+              Supercharge your DEXperience and unlock the full potential of decentralized trading.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
               <div className="border p-4 rounded">
@@ -55,14 +69,14 @@ const DexPalDashboard = () => {
                 </div>
                 <div className="flex justify-between mb-2">
                   <span>Current Partners:</span>
-                  <span className="font-semibold">12+ DEXs</span>
+                  <span className="font-semibold">20+ DEXs</span>
                 </div>
               </div>
               <div className="border p-4 rounded">
                 <h3 className="font-medium mb-2">Key Thesis</h3>
-                <p>Since 2023, derivatives volumes on DEXs have increased 500%.</p>
+                <p>DexPal bridges the gap between 100M+ CEX users and the growing DEX ecosystem.</p>
                 <p className="mt-2">
-                  Out of nearly $100 trillion traded in crypto derivatives yearly, more is 
+                  Out of nearly $500 billion traded in crypto derivatives, more is 
                   steadily moving to DEXs as DeFi infrastructure improves.
                 </p>
               </div>
@@ -75,24 +89,41 @@ const DexPalDashboard = () => {
             <h2 className="text-xl font-bold mb-4">Market Statistics</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div className="bg-blue-50 p-4 rounded">
-                <h3 className="font-medium text-blue-800 mb-1">Annual Crypto Derivatives</h3>
-                <p className="text-2xl font-bold">$100T</p>
-                <p className="text-sm">Total market size</p>
+                <h3 className="font-medium text-blue-800 mb-1">Active Networks</h3>
+                <p className="text-2xl font-bold">10+</p>
+                <p className="text-sm">Blockchain networks supported</p>
               </div>
               <div className="bg-green-50 p-4 rounded">
-                <h3 className="font-medium text-green-800 mb-1">DEX Growth Since 2023</h3>
-                <p className="text-2xl font-bold">+500%</p>
-                <p className="text-sm">Trading volume increase</p>
+                <h3 className="font-medium text-green-800 mb-1">Partner DEXs</h3>
+                <p className="text-2xl font-bold">20+</p>
+                <p className="text-sm">Decentralized exchanges</p>
               </div>
               <div className="bg-purple-50 p-4 rounded">
-                <h3 className="font-medium text-purple-800 mb-1">DEX Market Share</h3>
-                <p className="text-2xl font-bold">~10%</p>
-                <p className="text-sm">Of spot trading (growing)</p>
+                <h3 className="font-medium text-purple-800 mb-1">Total Users</h3>
+                <p className="text-2xl font-bold">500,000+</p>
+                <p className="text-sm">In the DEX ecosystem</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="bg-yellow-50 p-4 rounded">
+                <h3 className="font-medium text-yellow-800 mb-1">Tradeable Assets</h3>
+                <p className="text-2xl font-bold">300+</p>
+                <p className="text-sm">Trading pairs available</p>
+              </div>
+              <div className="bg-indigo-50 p-4 rounded">
+                <h3 className="font-medium text-indigo-800 mb-1">Active Competitions</h3>
+                <p className="text-2xl font-bold">20+</p>
+                <p className="text-sm">Ongoing trading contests</p>
+              </div>
+              <div className="bg-pink-50 p-4 rounded">
+                <h3 className="font-medium text-pink-800 mb-1">Available Rewards</h3>
+                <p className="text-2xl font-bold">$10M+</p>
+                <p className="text-sm">In incentives and rewards</p>
               </div>
             </div>
             <p className="mt-4">
-              78% of CEX traders have expressed interest in self-custody options according to a Binance Survey,
-              representing a massive potential market for DexPal.
+              The decentralized landscape is growing rapidly, with over $500 billion in volume traded on DEXs.
+              DexPal aims to be the central hub for all DEX trading activity.
             </p>
           </div>
         );
@@ -113,95 +144,745 @@ const DexPalDashboard = () => {
               </ul>
             </div>
             <div className="mt-6 border p-4 rounded">
-              <h3 className="font-medium mb-2">Token Economics</h3>
-              <p>
-                After establishing the points program, DexPal will launch a token with comprehensive utility
-                including governance rights, revenue sharing for stakers, and fee discounts for holders.
+              <h3 className="font-medium mb-2">Grant Partners</h3>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mt-3">
+                <div className="p-2 bg-gray-50 rounded text-center text-sm">Arbitrum DAO</div>
+                <div className="p-2 bg-gray-50 rounded text-center text-sm">Fuel Network</div>
+                <div className="p-2 bg-gray-50 rounded text-center text-sm">Vertex Protocol</div>
+                <div className="p-2 bg-gray-50 rounded text-center text-sm">Gains Network</div>
+                <div className="p-2 bg-gray-50 rounded text-center text-sm">Vela Exchange</div>
+              </div>
+            </div>
+          </div>
+        );
+      case 'custom_dashboard':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">Custom Dashboard</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> The Custom Dashboard feature aggregates all user trading activity across multiple wallets, DEXs, and networks in one unified interface.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Key Capabilities</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Multi-Wallet Aggregation</h4>
+                  <p className="text-sm">Connect and view multiple wallets in one dashboard, with data automatically organized and categorized.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Cross-DEX Overview</h4>
+                  <p className="text-sm">See positions and activity across all supported DEXs rather than switching between multiple platforms.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Customizable Widgets</h4>
+                  <p className="text-sm">Arrange and personalize dashboard elements based on your preference and trading priorities.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Real-Time Data</h4>
+                  <p className="text-sm">Get up-to-the-minute information on positions, balances, and market movements.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">Dashboard Elements</h3>
+              <ul className="list-disc pl-5 space-y-1 text-sm">
+                <li>Active positions widget with P&L tracking</li>
+                <li>Historical performance charts</li>
+                <li>Recent transactions log</li>
+                <li>Market overview with watchlist</li>
+                <li>Account balances across wallets</li>
+                <li>Alerts and notifications center</li>
+              </ul>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Custom Dashboard feature. The actual dashboard is accessible through the DexPal application.
               </p>
             </div>
           </div>
         );
-      case 'customers':
+      case 'pair_screener':
         return (
           <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-4">Target Customers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">1. Traders (Users)</h3>
-                <ul className="space-y-1">
-                  <li><span className="font-semibold">DeFi users (0.5M):</span> Existing traders using Perps DEXs</li>
-                  <li><span className="font-semibold">CEX users (100M+):</span> Primary audience with little DEX experience</li>
-                  <li><span className="font-semibold">Forex traders (20M+):</span> Currently using traditional FX exchanges</li>
-                </ul>
-              </div>
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">2. DEXs</h3>
-                <p>Hundreds of perpetual DEXs across major blockchain networks</p>
-                <p className="mt-2"><span className="font-semibold">Current:</span> Gains Network, Vertex Protocol, SynFutures, KiloEx, ApeX</p>
-                <p><span className="font-semibold">Goal:</span> Partner with top 50 DEXs</p>
+            <h2 className="text-xl font-bold mb-4">Pair Screener</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> The Pair Screener allows users to discover and analyze over 300 tradable assets across 20+ supported DEXs.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Feature Overview</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Comprehensive Listings</h4>
+                  <p className="text-sm">Browse all available trading pairs from supported DEXs in one consolidated view.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Advanced Filtering</h4>
+                  <p className="text-sm">Filter assets by network, DEX, trading volume, price action, and more to find the perfect trading opportunity.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Market Data</h4>
+                  <p className="text-sm">View key metrics including 24h volume, funding rates, open interest, and available leverage for each pair.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Comparison Tools</h4>
+                  <p className="text-sm">Compare the same trading pair across multiple DEXs to find the best trading conditions.</p>
+                </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">3. Partners</h3>
-                <p>Strategic partners across Web3: blockchains, dApps, wallets, bridges, fiat on-ramps</p>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">Screener Components</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 mt-3">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Asset</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">DEX</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Price</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">24h %</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Volume</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Funding</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr className="text-sm">
+                      <td className="px-4 py-2">BTC-USD</td>
+                      <td className="px-4 py-2">Gains Network</td>
+                      <td className="px-4 py-2">$71,455</td>
+                      <td className="px-4 py-2 text-green-600">+2.5%</td>
+                      <td className="px-4 py-2">$157M</td>
+                      <td className="px-4 py-2">0.01%</td>
+                    </tr>
+                    <tr className="text-sm bg-gray-50">
+                      <td className="px-4 py-2">ETH-USD</td>
+                      <td className="px-4 py-2">Vertex Protocol</td>
+                      <td className="px-4 py-2">$3,885</td>
+                      <td className="px-4 py-2 text-red-600">-1.2%</td>
+                      <td className="px-4 py-2">$98M</td>
+                      <td className="px-4 py-2">0.02%</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">4. Institutional</h3>
-                <p>Hedge funds, market makers, research firms, enterprise API customers</p>
-              </div>
+              <p className="text-xs text-gray-500 mt-2 italic">Example visualization - actual data available in the DexPal application</p>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Pair Screener feature. The actual screener is accessible through the DexPal application.
+              </p>
             </div>
           </div>
         );
-      case 'product':
+      case 'rewards':
         return (
           <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-4">Product Roadmap</h2>
-            <div className="space-y-6">
-              <div className="border-2 border-blue-400 bg-blue-50 p-4 rounded">
-                <h3 className="font-medium mb-2">V1 (Current)</h3>
-                <div className="grid grid-cols-2 gap-2">
-                  <div>• Aggregated Dashboard</div>
-                  <div>• Trading History + CSV</div>
-                  <div>• Active Positions View</div>
-                  <div>• Pair Screener</div>
-                  <div>• Trading Analytics</div>
-                  <div>• Multi-Wallet Management</div>
-                  <div>• Rewards/Earn Section</div>
-                  <div>• DEX Profiles</div>
-                </div>
-              </div>
+            <h2 className="text-xl font-bold mb-4">Rewards & Competitions</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal offers comprehensive tracking and alerts for trading competitions, incentives, and giveaways across supported DEXs.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">DexPal Points Program</h3>
+              <p className="text-sm mb-4">The DexPal Points system rewards users for their activity on the platform and when trading with our partner DEXs using referral codes.</p>
               
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">Phase 2 (Next 6 Months)</h3>
-                <div className="grid grid-cols-2 gap-2">
-                  <div>• Leaderboards</div>
-                  <div>• Enhanced Analytics</div>
-                  <div>• Alerts System</div>
-                  <div>• DexPal AI Assistant</div>
-                  <div>• Educational Center</div>
-                  <div>• DEX Comparison Tool</div>
-                  <div>• Mobile Application</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Earning Points</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-sm">
+                    <li>Using DexPal referral codes on partner DEXs</li>
+                    <li>Inviting friends through the referral program</li>
+                    <li>Participating in trading competitions</li>
+                    <li>Contributing to the community</li>
+                  </ul>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Point Benefits</h4>
+                  <ul className="list-disc pl-5 space-y-1 text-sm">
+                    <li>Access to exclusive features</li>
+                    <li>Eligibility for special rewards</li>
+                    <li>Enhanced rewards during trading competitions</li>
+                    <li>Potential for token airdrops (future)</li>
+                  </ul>
                 </div>
               </div>
-              
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">Long-Term Vision (Phase 3-4)</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                  <div className="p-2 bg-gray-50 rounded">
-                    <div className="font-medium">Trade Execution</div>
-                    <p className="text-sm">Direct trade execution with position protection</p>
-                  </div>
-                  <div className="p-2 bg-gray-50 rounded">
-                    <div className="font-medium">Copy Trading</div>
-                    <p className="text-sm">Follow top traders with customizable parameters</p>
-                  </div>
-                  <div className="p-2 bg-gray-50 rounded">
-                    <div className="font-medium">Market Expansion</div>
-                    <p className="text-sm">Expand to options and spot trading</p>
-                  </div>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Trading Competitions Tracker</h3>
+              <div className="border p-4 rounded bg-gray-50">
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-100">
+                      <tr>
+                        <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Competition</th>
+                        <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">DEX</th>
+                        <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Prize Pool</th>
+                        <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">End Date</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200 bg-white">
+                      <tr className="text-sm">
+                        <td className="px-4 py-2">Summer Trading Championship</td>
+                        <td className="px-4 py-2">Gains Network</td>
+                        <td className="px-4 py-2">$50,000</td>
+                        <td className="px-4 py-2">Aug 30, 2025</td>
+                      </tr>
+                      <tr className="text-sm bg-gray-50">
+                        <td className="px-4 py-2">Weekly Leaderboard</td>
+                        <td className="px-4 py-2">Vertex Protocol</td>
+                        <td className="px-4 py-2">$10,000</td>
+                        <td className="px-4 py-2">Every Sunday</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-xs text-gray-500 mt-2 italic">Example visualization - active competitions are updated regularly in the app</p>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Rewards & Competitions feature. The actual rewards program is accessible through the DexPal application.
+              </p>
+            </div>
+          </div>
+        );
+      case 'earn':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">Earn Opportunities</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal offers various opportunities for users to earn rewards and benefits through trading and participation on the platform.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Earning Opportunities</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Trading Volume</h4>
+                  <p className="text-sm">Earn points for trading volume on supported DEXs.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Referrals</h4>
+                  <p className="text-sm">Refer friends to earn rewards and benefits.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Competitions</h4>
+                  <p className="text-sm">Participate in trading competitions for additional rewards.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Education</h4>
+                  <p className="text-sm">Earn points by participating in educational content and events.</p>
                 </div>
               </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Earn Opportunities feature. The actual earning opportunities are accessible through the DexPal application.
+              </p>
+            </div>
+          </div>
+        );
+      case 'dex_profile':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">DEX Profiles</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal provides detailed profiles for each supported DEX, including key metrics, trading pairs, and user activity.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Feature Overview</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Network Information</h4>
+                  <p className="text-sm">View network details, including blockchain type and mainnet/testnet status.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Trading Activity</h4>
+                  <p className="text-sm">See trading volume, liquidity, and recent activity on the DEX.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Token Information</h4>
+                  <p className="text-sm">View token details, including supply, market capitalization, and tokenomics.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Governance</h4>
+                  <p className="text-sm">Learn about the governance structure of the DEX.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">DEX Profiles</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 mt-3">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">DEX</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Network</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Trading Pairs</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Liquidity</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Activity</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr className="text-sm">
+                      <td className="px-4 py-2">Gains Network</td>
+                      <td className="px-4 py-2">Arbitrum</td>
+                      <td className="px-4 py-2">300+</td>
+                      <td className="px-4 py-2">$157M</td>
+                      <td className="px-4 py-2">High</td>
+                    </tr>
+                    <tr className="text-sm bg-gray-50">
+                      <td className="px-4 py-2">Vertex Protocol</td>
+                      <td className="px-4 py-2">Arbitrum</td>
+                      <td className="px-4 py-2">200+</td>
+                      <td className="px-4 py-2">$98M</td>
+                      <td className="px-4 py-2">Medium</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the DEX Profiles feature. The actual profiles are accessible through the DexPal application.
+              </p>
+            </div>
+          </div>
+        );
+      case 'trading_history':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">Trading History</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal provides a comprehensive trading history feature for users to track their trading activity and performance.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Feature Overview</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Historical Data</h4>
+                  <p className="text-sm">View detailed trading history for all supported DEXs.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Performance Analysis</h4>
+                  <p className="text-sm">Analyze trading performance and identify trends.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Trade Analytics</h4>
+                  <p className="text-sm">Get insights into trading strategies and performance.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">CSV Export</h4>
+                  <p className="text-sm">Export trading history data to CSV for further analysis.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">Trading History Components</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 mt-3">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Trade ID</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Asset</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">DEX</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Price</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Volume</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">P&L</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr className="text-sm">
+                      <td className="px-4 py-2">12345</td>
+                      <td className="px-4 py-2">BTC-USD</td>
+                      <td className="px-4 py-2">Gains Network</td>
+                      <td className="px-4 py-2">$71,455</td>
+                      <td className="px-4 py-2">$157M</td>
+                      <td className="px-4 py-2 text-green-600">$1,000</td>
+                      <td className="px-4 py-2">Aug 1, 2025</td>
+                    </tr>
+                    <tr className="text-sm bg-gray-50">
+                      <td className="px-4 py-2">12346</td>
+                      <td className="px-4 py-2">ETH-USD</td>
+                      <td className="px-4 py-2">Vertex Protocol</td>
+                      <td className="px-4 py-2">$3,885</td>
+                      <td className="px-4 py-2">$98M</td>
+                      <td className="px-4 py-2 text-red-600">-$500</td>
+                      <td className="px-4 py-2">Aug 2, 2025</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Trading History feature. The actual history is accessible through the DexPal application.
+              </p>
+            </div>
+          </div>
+        );
+      case 'analytics':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">Trade Analytics</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal provides advanced analytics and insights to help users make informed trading decisions.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Analytics Components</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Performance Metrics</h4>
+                  <p className="text-sm">Analyze trading performance and identify key indicators.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Strategy Patterns</h4>
+                  <p className="text-sm">Identify trading patterns and trends.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Risk Management</h4>
+                  <p className="text-sm">Assess and manage trading risks.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Fee Analysis</h4>
+                  <p className="text-sm">Analyze trading fees and optimize costs.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">Analytics Tools</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 mt-3">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Tool</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Usage</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr className="text-sm">
+                      <td className="px-4 py-2">Trade Analytics Dashboard</td>
+                      <td className="px-4 py-2">Visualize trading performance and activity.</td>
+                      <td className="px-4 py-2">Used daily for monitoring and analysis.</td>
+                    </tr>
+                    <tr className="text-sm bg-gray-50">
+                      <td className="px-4 py-2">API Integration</td>
+                      <td className="px-4 py-2">Access real-time trading data and analytics through API.</td>
+                      <td className="px-4 py-2">Used for automated trading strategies and integration with other platforms.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Trade Analytics feature. The actual analytics tools are accessible through the DexPal application.
+              </p>
+            </div>
+          </div>
+        );
+      case 'wallets':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">Wallets Manager</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal provides a wallets manager feature to manage and organize multiple wallets.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Feature Overview</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Multi-Wallet Management</h4>
+                  <p className="text-sm">Connect and manage multiple wallets in one centralized interface.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Token Balances</h4>
+                  <p className="text-sm">View token balances and transaction history for each wallet.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Transaction History</h4>
+                  <p className="text-sm">Track all transactions and transfers for each wallet.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Wallet Security</h4>
+                  <p className="text-sm">Set up and manage security features for each wallet.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">Wallets Manager Components</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 mt-3">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Wallet</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Network</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Tokens</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Balance</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Transactions</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr className="text-sm">
+                      <td className="px-4 py-2">Wallet 1</td>
+                      <td className="px-4 py-2">Arbitrum</td>
+                      <td className="px-4 py-2">BTC, ETH, USDC</td>
+                      <td className="px-4 py-2">$10,000</td>
+                      <td className="px-4 py-2">100</td>
+                    </tr>
+                    <tr className="text-sm bg-gray-50">
+                      <td className="px-4 py-2">Wallet 2</td>
+                      <td className="px-4 py-2">Polygon</td>
+                      <td className="px-4 py-2">MATIC, USDT</td>
+                      <td className="px-4 py-2">$5,000</td>
+                      <td className="px-4 py-2">50</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Wallets Manager feature. The actual wallets manager is accessible through the DexPal application.
+              </p>
+            </div>
+          </div>
+        );
+      case 'leaderboards':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">Leaderboards</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal offers leaderboards for various trading competitions and activities across supported DEXs.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Leaderboard Components</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Trading Leaderboards</h4>
+                  <p className="text-sm">Compete against other traders for top rankings.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Education Leaderboards</h4>
+                  <p className="text-sm">Compete against other users in educational activities.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Community Leaderboards</h4>
+                  <p className="text-sm">Participate in community-driven leaderboards.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Rewards Leaderboards</h4>
+                  <p className="text-sm">Compete for special rewards and incentives.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">Leaderboards</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 mt-3">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Leaderboard</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">DEX</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Rank</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Points</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr className="text-sm">
+                      <td className="px-4 py-2">Summer Trading Championship</td>
+                      <td className="px-4 py-2">Gains Network</td>
+                      <td className="px-4 py-2">1st</td>
+                      <td className="px-4 py-2">10,000</td>
+                    </tr>
+                    <tr className="text-sm bg-gray-50">
+                      <td className="px-4 py-2">Weekly Leaderboard</td>
+                      <td className="px-4 py-2">Vertex Protocol</td>
+                      <td className="px-4 py-2">2nd</td>
+                      <td className="px-4 py-2">5,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Leaderboards feature. The actual leaderboards are accessible through the DexPal application.
+              </p>
+            </div>
+          </div>
+        );
+      case 'education':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">Education & AI</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal offers educational content and AI-powered tools to enhance trading knowledge and skills.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">Education Components</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Beginner Resources</h4>
+                  <p className="text-sm">Learn the basics of decentralized trading.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Intermediate Strategies</h4>
+                  <p className="text-sm">Explore advanced trading strategies.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Expert Content</h4>
+                  <p className="text-sm">Access expert insights and analysis.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">AI-Powered Tools</h4>
+                  <p className="text-sm">Use AI for automated trading and decision-making.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">Education Resources</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 mt-3">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Resource</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Access</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr className="text-sm">
+                      <td className="px-4 py-2">Trading Basics Course</td>
+                      <td className="px-4 py-2">Video Course</td>
+                      <td className="px-4 py-2">Free</td>
+                    </tr>
+                    <tr className="text-sm bg-gray-50">
+                      <td className="px-4 py-2">Advanced Trading Strategies</td>
+                      <td className="px-4 py-2">E-Book</td>
+                      <td className="px-4 py-2">Paid</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the Education & AI feature. The actual educational content and AI tools are accessible through the DexPal application.
+              </p>
+            </div>
+          </div>
+        );
+      case 'news':
+        return (
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h2 className="text-xl font-bold mb-4">Latest News</h2>
+            <div className="bg-blue-50 p-4 rounded-lg mb-6 border border-blue-200">
+              <p className="text-sm">
+                <span className="font-semibold">Feature Documentation:</span> DexPal provides a news section to stay updated on the latest developments in the decentralized finance space.
+              </p>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="font-medium mb-3">News Components</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Latest Articles</h4>
+                  <p className="text-sm">Read the latest articles and insights.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Market Updates</h4>
+                  <p className="text-sm">Stay informed about market trends and developments.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Community Events</h4>
+                  <p className="text-sm">Find upcoming events and meetups.</p>
+                </div>
+                <div className="border p-4 rounded">
+                  <h4 className="font-medium mb-2">Regulatory Updates</h4>
+                  <p className="text-sm">Stay updated on regulatory changes affecting the industry.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border p-4 rounded bg-gray-50">
+              <h3 className="font-medium mb-2">News</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200 mt-3">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Title</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Source</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 bg-white">
+                    <tr className="text-sm">
+                      <td className="px-4 py-2">New DEX Integration</td>
+                      <td className="px-4 py-2">Aug 1, 2025</td>
+                      <td className="px-4 py-2">DexPal Blog</td>
+                    </tr>
+                    <tr className="text-sm bg-gray-50">
+                      <td className="px-4 py-2">Upcoming Trading Competition</td>
+                      <td className="px-4 py-2">Aug 15, 2025</td>
+                      <td className="px-4 py-2">DexPal Announcement</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 italic">
+                Note: This is documentation of the News feature. The actual news section is accessible through the DexPal application.
+              </p>
             </div>
           </div>
         );
@@ -405,209 +1086,6 @@ const DexPalDashboard = () => {
             </div>
           </div>
         );
-      case 'analytics':
-        return (
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-4">Advanced Analytics</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">Performance Metrics</h3>
-                <ul className="space-y-1 text-sm">
-                  <li>• Win rate percentage across DEXs</li>
-                  <li>• Average trade duration</li>
-                  <li>• Risk/reward ratio calculation</li>
-                  <li>• Fee analysis and optimization suggestions</li>
-                </ul>
-              </div>
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">Strategy Patterns</h3>
-                <ul className="space-y-1 text-sm">
-                  <li>• Most profitable trading pairs</li>
-                  <li>• Best performing time periods</li>
-                  <li>• Position sizing effectiveness</li>
-                  <li>• Leverage optimization analysis</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-              <h3 className="font-medium mb-2">Cross-DEX Arbitrage Opportunities</h3>
-              <p className="text-sm">Identify price discrepancies across different DEXs to capitalize on arbitrage opportunities.</p>
-            </div>
-          </div>
-        );
-      case 'education':
-        return (
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-4">Educational Center</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="border-2 border-green-200 p-4 rounded bg-green-50">
-                <h3 className="font-medium mb-2">Beginner Resources</h3>
-                <ul className="space-y-1 text-sm">
-                  <li>• Perpetual Futures Fundamentals</li>
-                  <li>• CEX vs DEX Trading Differences</li>
-                  <li>• Wallet Security Best Practices</li>
-                  <li>• Understanding Funding Rates</li>
-                </ul>
-              </div>
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">Intermediate Strategies</h3>
-                <ul className="space-y-1 text-sm">
-                  <li>• Advanced Trading Strategies</li>
-                  <li>• Risk Management Techniques</li>
-                  <li>• Cross-DEX Arbitrage Methods</li>
-                  <li>• Technical Analysis for Crypto</li>
-                </ul>
-              </div>
-              <div className="border p-4 rounded">
-                <h3 className="font-medium mb-2">Expert Content</h3>
-                <ul className="space-y-1 text-sm">
-                  <li>• Market Making Techniques</li>
-                  <li>• Advanced Order Types</li>
-                  <li>• Portfolio Construction</li>
-                  <li>• On-Chain Data Analysis</li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-6 border p-4 rounded bg-blue-50">
-              <h3 className="font-medium mb-2">DEX-Specific Guides</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
-                <div className="p-2 bg-white rounded text-center text-sm">Gains Network</div>
-                <div className="p-2 bg-white rounded text-center text-sm">Vertex Protocol</div>
-                <div className="p-2 bg-white rounded text-center text-sm">SynFutures</div>
-                <div className="p-2 bg-white rounded text-center text-sm">KiloEx</div>
-                <div className="p-2 bg-white rounded text-center text-sm">ApeX Protocol</div>
-              </div>
-            </div>
-          </div>
-        );
-      case 'rewards':
-        return (
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-4">Points & Rewards Program</h2>
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg mb-6">
-              <h3 className="font-medium mb-2">Your Points: <span className="text-xl font-bold">2,450</span></h3>
-              <div className="bg-white rounded-full h-2 mt-2">
-                <div className="bg-blue-500 h-2 rounded-full w-3/5"></div>
-              </div>
-              <p className="text-xs mt-1">550 points until next tier: Silver</p>
-            </div>
-            
-            <div className="mb-6">
-              <h3 className="font-medium mb-3">Earning Opportunities</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="border p-3 rounded">
-                  <h4 className="text-sm font-semibold mb-1">Trading Volume</h4>
-                  <p className="text-xs mb-2">1 point per $100 traded</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-xs">Volume this month: $28,500</span>
-                    <span className="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">285 points</span>
-                  </div>
-                </div>
-                <div className="border p-3 rounded">
-                  <h4 className="text-sm font-semibold mb-1">Referrals</h4>
-                  <p className="text-xs mb-2">100 points per active trader referred</p>
-                  <button className="w-full bg-blue-500 hover:bg-blue-600 text-white text-sm rounded py-1">
-                    Get Referral Link
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="font-medium mb-3">Point Utility</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="bg-blue-100 text-blue-800 rounded-full w-5 h-5 flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">✓</span>
-                  <span><strong>Fee Discounts:</strong> 5% off premium features for every 1,000 points</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-100 text-blue-800 rounded-full w-5 h-5 flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">✓</span>
-                  <span><strong>Trading Competitions:</strong> Exclusive access to enhanced prize pools</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-100 text-blue-800 rounded-full w-5 h-5 flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">✓</span>
-                  <span><strong>Token Conversion:</strong> Future eligibility for token airdrops at 1:100 ratio</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        );
-      case 'paper':
-        return (
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-4">Paper Trading Simulator</h2>
-            <div className="bg-yellow-50 p-3 rounded-lg mb-6 border border-yellow-200">
-              <p className="text-sm">Practice trading with virtual funds. All trades are simulated - no real assets are at risk.</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="p-4 rounded bg-blue-50">
-                <h3 className="font-medium mb-2">Portfolio Balance</h3>
-                <p className="text-2xl font-bold">$10,000 USDC</p>
-                <p className="text-xs text-gray-500">Starting capital</p>
-              </div>
-              <div className="p-4 rounded bg-green-50">
-                <h3 className="font-medium mb-2">Open Positions</h3>
-                <p className="text-2xl font-bold">0</p>
-                <p className="text-xs text-gray-500">No active trades</p>
-              </div>
-              <div className="p-4 rounded bg-purple-50">
-                <h3 className="font-medium mb-2">Profit/Loss</h3>
-                <p className="text-2xl font-bold">$0.00</p>
-                <p className="text-xs text-gray-500">Start trading to see P&L</p>
-              </div>
-            </div>
-            
-            <div className="border p-4 rounded">
-              <h3 className="font-medium mb-3">Create Paper Trade</h3>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label className="text-sm font-medium block mb-1">Select DEX</label>
-                  <select className="w-full p-2 border rounded text-sm">
-                    <option>Gains Network</option>
-                    <option>Vertex Protocol</option>
-                    <option>SynFutures</option>
-                    <option>KiloEx</option>
-                    <option>ApeX Protocol</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="text-sm font-medium block mb-1">Trading Pair</label>
-                  <select className="w-full p-2 border rounded text-sm">
-                    <option>BTC/USD</option>
-                    <option>ETH/USD</option>
-                    <option>SOL/USD</option>
-                    <option>AVAX/USD</option>
-                  </select>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label className="text-sm font-medium block mb-1">Position Type</label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <button className="bg-green-500 text-white text-sm py-2 rounded">Long</button>
-                    <button className="bg-gray-200 text-gray-700 text-sm py-2 rounded">Short</button>
-                  </div>
-                </div>
-                <div>
-                  <label className="text-sm font-medium block mb-1">Leverage</label>
-                  <input type="range" min="1" max="20" className="w-full" />
-                  <div className="flex justify-between text-xs">
-                    <span>1x</span>
-                    <span>5x</span>
-                    <span>10x</span>
-                    <span>20x</span>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
-                  Place Paper Trade
-                </button>
-              </div>
-            </div>
-          </div>
-        );
       case 'security':
         return (
           <div className="bg-white p-6 rounded-lg shadow">
@@ -649,76 +1127,11 @@ const DexPalDashboard = () => {
             </div>
           </div>
         );
-      case 'compare':
-        return (
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-bold mb-4">DEX Comparison Tool</h2>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              <div className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm flex items-center">
-                <span>Gains Network</span>
-                <button className="ml-2 text-xs">&times;</button>
-              </div>
-              <div className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm flex items-center">
-                <span>Vertex Protocol</span>
-                <button className="ml-2 text-xs">&times;</button>
-              </div>
-              <div className="border border-dashed border-gray-300 px-2 py-1 rounded text-sm text-gray-500">
-                + Add DEX to compare
-              </div>
-            </div>
-            
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead>
-                  <tr className="bg-gray-50">
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feature</th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gains Network</th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vertex Protocol</th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  <tr>
-                    <td className="px-4 py-3 text-sm font-medium">Networks</td>
-                    <td className="px-4 py-3 text-sm">Arbitrum, Polygon</td>
-                    <td className="px-4 py-3 text-sm">Arbitrum</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 text-sm font-medium">Max Leverage</td>
-                    <td className="px-4 py-3 text-sm">150x</td>
-                    <td className="px-4 py-3 text-sm">100x</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 text-sm font-medium">Trading Fee</td>
-                    <td className="px-4 py-3 text-sm">0.08%-0.1%</td>
-                    <td className="px-4 py-3 text-sm">0.05%-0.1%</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 text-sm font-medium">Collateral Types</td>
-                    <td className="px-4 py-3 text-sm">DAI, USDC</td>
-                    <td className="px-4 py-3 text-sm">USDC</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 text-sm font-medium">Current Incentives</td>
-                    <td className="px-4 py-3 text-sm">Trading competition: 5,000 GNS</td>
-                    <td className="px-4 py-3 text-sm">Fee discount: 20% for 30 days</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <div className="mt-6 p-3 bg-blue-50 rounded text-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 px-4 rounded">
-                Generate Detailed Report
-              </button>
-            </div>
-          </div>
-        );
       default:
         return (
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-bold mb-4">Select a section</h2>
-            <p>Please select a section from the navigation menu to view content.</p>
+            <p>Please select a section from the navigation menu to view documentation.</p>
           </div>
         );
     }
@@ -730,7 +1143,7 @@ const DexPalDashboard = () => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <h1 className="text-xl font-bold text-gray-900">DexPal</h1>
-            <span className="ml-2 text-sm text-gray-500">Interactive Dashboard</span>
+            <span className="ml-2 text-sm text-gray-500">Documentation Center</span>
           </div>
           <div className="flex items-center space-x-2">
             <span className="text-sm text-gray-600">Seed Round:</span>
@@ -740,12 +1153,14 @@ const DexPalDashboard = () => {
       </header>
       
       <main className="max-w-7xl mx-auto px-4 py-6">
+        <DocumentationBanner />
+        
         <div className="flex flex-col md:flex-row">
           {/* Navigation Sidebar */}
           <nav className="bg-white shadow-sm rounded-lg p-4 md:w-64 mb-6 md:mb-0 md:mr-6 flex-shrink-0">
             <div className="mb-4">
               <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                Dashboard Sections
+                Documentation Sections
               </h2>
             </div>
             <ul className="space-y-2">
@@ -776,7 +1191,7 @@ const DexPalDashboard = () => {
       <footer className="bg-white shadow-sm mt-8">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <p className="text-sm text-gray-500 text-center">
-            DexPal - The ultimate data terminal and rewards hub for leverage trading on DEXs
+            DexPal - The first data dashboard and rewards hub for leverage trading on DEXs
           </p>
         </div>
       </footer>
