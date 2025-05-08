@@ -2,14 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-purple: #B47AEA;
+  --brand-white: #FFFFFF;
+  --dark-bg: #121212;
+  --dark-card: #1E1E1E;
+  --dark-border: #333333;
+  --dark-text: #E0E0E0;
+  --dark-text-secondary: #AAAAAA;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Brand color classes */
+.brand-purple {
+  color: var(--brand-purple);
+}
+
+.bg-brand-purple {
+  background-color: var(--brand-purple);
+}
+
+/* Dark theme styling */
+.dark-card {
+  background-color: var(--dark-card);
+  border: 1px solid var(--dark-border);
+}
+
+.dark-border {
+  border-color: var(--dark-border);
+}
+
+.dark-text {
+  color: var(--dark-text);
+}
+
+.dark-text-secondary {
+  color: var(--dark-text-secondary);
+}
+
+/* Light theme (default) */
+.theme-light {
+  --primary-color: var(--brand-purple);
+  --text-on-primary: var(--brand-white);
+}
+
+/* Dark theme */
+.theme-dark {
+  --primary-color: var(--brand-white);
+  --text-on-primary: var(--brand-purple);
 } 

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import DexPalDashboard from '../DexPalDashboard';
+import { useState } from 'react';
 
 export default function Home() {
   return (
